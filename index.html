@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <textarea name="" id="input"
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false" ></textarea>
+    </div>
+    <script src="js/BASIC.js"></script>
+    <script>
+        document.getElementById("input").focus();
+        const basic = new BASIC();
+
+        const inputArea = document.getElementById("input");
+
+        inputArea.addEventListener("keyup", evt => {
+            if (evt.key == "Enter") {
+                basic.Lexer(evt.target.value);
+            }
+        })
+    </script>
+</html>

@@ -1,0 +1,77 @@
+@font-face {
+    font-family: C64;
+    src: url(../fonts/C64_Pro_Mono-STYLE.ttf);
+  }
+  
+:root {
+--black: #000000;
+--grey-1: #626262;
+--grey-2:#898989;
+--grey-3:#adadad;
+--white:#ffffff;
+--red:#9f4e44;
+--light-red:#cb7e75;
+--brown:#6d5412;
+--orange:#a1683c;
+--yellow:#c9d487;
+--light-green:#9ae29b;
+--green:#5cab5e;
+--cyan:#6abfc6;
+--light-blue:#887ecb;
+--dark-blue:#50459b;
+--purple:#a057a3;
+
+    --background-color: var(--dark-blue);
+    --foreground-color: var(--light-blue);
+}
+* {
+    font-family: 'C64', monospace;
+    font-size: 16px;
+    line-height: 2;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+    text-transform: uppercase;
+}
+
+body {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: 64px;
+    background-color: var(--foreground-color);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 81ch;
+    height:50ch;
+    min-width: 81ch;
+    min-height: 50ch;
+    max-width: 81ch;
+    max-height: 50ch;
+    padding: 1ch;
+}
+
+#input {
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    resize: none;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    flex: 1;
+    outline: none;
+    border: none;
+}
